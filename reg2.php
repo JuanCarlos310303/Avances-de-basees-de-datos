@@ -18,3 +18,29 @@ else
 	echo "Datos guardados correctamente<br><a href='Productos_dentales.html'>Volver</a>";
 }
  ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mostrar Datos</title>
+</head>
+<body>
+<table width="50%" border="2">
+	<tr bgcolor="red">
+		<th>ID</th>
+		<th>Cantidad</th>
+	</tr>
+	<?php
+	$sql="SELECT * FROM  productos2";
+	$result=mysqli_query($con,$sql);
+	while ($mostrar=mysqli_fetch_array($result)) {
+	?>
+	<tr bgcolor="pink" align="center">
+		<td><?php echo $mostrar['ID']?></td>
+		<td><?php echo $mostrar['Cantidad']?></td>
+	</tr> 
+	<?php
+	}
+	?>
+</table>
+</body>
+</html>
