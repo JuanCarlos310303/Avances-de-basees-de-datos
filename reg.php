@@ -29,6 +29,7 @@ else
 <body>
 <table width="50%" border="2">
 	<tr bgcolor="red">
+		<th>ID</th>
 		<th>Nombre</th>
 		<th>Apellidop</th>
 		<th>Apellidom</th>
@@ -41,6 +42,7 @@ else
 	while ($mostrar=mysqli_fetch_array($result)) {
 	?>
 	<tr bgcolor="pink" align="center">
+		<td><?php echo $mostrar['ID']?></td>
 		<td><?php echo $mostrar['Nombre']?></td>
 		<td><?php echo $mostrar['Apellidop']?></td>
 		<td><?php echo $mostrar['Apellidom']?></td>
